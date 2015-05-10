@@ -1,11 +1,9 @@
-require 'formula'
-
 class Stp < Formula
-  head 'http://stp-fast-prover.svn.sourceforge.net/svnroot/stp-fast-prover/trunk/stp', :revision => '1134'
-  homepage 'http://sites.google.com/site/stpfastprover/'
+  head "https://github.com/stp/stp.git"
+  homepage "https://stp.github.io/"
 
   def install
     system "./scripts/configure", "--with-prefix=#{prefix}"
-    system "make install"
+    system "make", "install"
   end
 end
